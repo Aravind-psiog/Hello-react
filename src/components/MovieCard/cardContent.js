@@ -25,16 +25,18 @@ const CardContentent = (props) => {
   };
   console.log(props.movies);
   return (
-    <Card sx={{ maxWidth: 250 }}>
+    <Card sx={{ maxWidth: 300 }}>
       <CardMedia
-        sx={{ height: 250 }}
+        sx={{ height: 200 }}
         component="img"
         image={img}
         alt={props.movies.title}
       />
       <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          {props.movies.title}
+        <Typography gutterBottom variant="h8" component="div">
+          <Box width={"280px"} height={"30px"}>
+            {props.movies.title}
+          </Box>
         </Typography>
         <Box width={"20%"}>
           <Rating
@@ -48,7 +50,9 @@ const CardContentent = (props) => {
           />
         </Box>
         <Box padding={"10px"}>
-          <Typography color={"grey"}>{props.movies.release_date}</Typography>
+          <Typography fontSize={10} fontFamily={"Segoe UI"} color={"grey"}>
+            {props.movies.release_date}
+          </Typography>
         </Box>
       </CardContent>
       <CardActions>

@@ -7,9 +7,12 @@ function App() {
       <Grid>
         <HeaderTemplate />
       </Grid>
-      <Grid item xs={10} lg={3} xl={2} direction={"row"}>
+      <Grid>
         <MovieCard />
       </Grid>
+      {/* <Grid item xs={4}>
+        <MovieCard />
+      </Grid> */}
     </Grid>
   );
 }

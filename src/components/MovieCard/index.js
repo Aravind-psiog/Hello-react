@@ -19,22 +19,21 @@ const MovieCard = () => {
   //   MoviesApi().map((movie) => console.log(movie.original_title));
   // }
   return (
-    <Box sx={{ width: "100%" }} paddingTop={10} padding={10}>
-      <Grid
-        container
-        rowSpacing={1}
-        columnSpacing={{ xs: 1, sm: 2, md: 30 }}
-        columnGap={1}
-        rowGap={5}
-        justifyContent={"left"}
-        // paddingTop={3}
-        // alignItems={"center"}
-      >
-        {MoviesApi().map((movie) => (
-          <CardContentent movies={movie}></CardContentent>
-        ))}
-      </Grid>
-    </Box>
+    <Grid
+      container
+      rowSpacing={1}
+      // columnSpacing={{ xs: 1, sm: 2, md: 30 }}
+      columnGap={1}
+      rowGap={5}
+      justifyContent={"left"}
+      paddingTop={10}
+      padding={10}
+      // alignItems={"center"}
+    >
+      {MoviesApi().map((movie) => (
+        <CardContentent movies={movie}></CardContentent>
+      ))}
+    </Grid>
   );
 };
 
