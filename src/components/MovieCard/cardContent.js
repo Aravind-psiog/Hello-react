@@ -1,6 +1,5 @@
 import { Grid, Box, useTheme } from "@mui/material";
 import { red } from "@mui/material/colors";
-import movieBanner from "../images/inception.jpg";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
@@ -21,13 +20,18 @@ const CardContentent = (props) => {
   var cardStyle = {
     display: "block",
     width: "20vw",
-    transitionDuration: "0.3s",
+    // transitionDuration: "0.3s",
     height: "40vw",
   };
   console.log(props.movies);
   return (
-    <Card style={cardStyle}>
-      <CardMedia component="img" height="65%" image={img} alt="Chevrolet" />
+    <Card sx={{ maxWidth: 250 }}>
+      <CardMedia
+        sx={{ height: 250 }}
+        component="img"
+        image={img}
+        alt={props.movies.title}
+      />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
           {props.movies.title}

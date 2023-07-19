@@ -7,8 +7,9 @@ function App() {
       <Grid>
         <HeaderTemplate />
       </Grid>
-
-      <MovieCard />
+      <Grid item xs={10} lg={3} xl={2} direction={"row"}>
+        <MovieCard />
+      </Grid>
     </Grid>
   );
 }

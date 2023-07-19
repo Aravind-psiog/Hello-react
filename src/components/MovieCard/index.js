@@ -1,6 +1,5 @@
 import { Grid, Box, useTheme } from "@mui/material";
 import { red } from "@mui/material/colors";
-import movieBanner from "../images/inception.jpg";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
@@ -26,8 +25,8 @@ const MovieCard = () => {
         rowSpacing={1}
         columnSpacing={{ xs: 1, sm: 2, md: 30 }}
         columnGap={1}
-        rowGap={1}
-        justifyContent={"center"}
+        rowGap={5}
+        justifyContent={"left"}
         // paddingTop={3}
         // alignItems={"center"}
       >
