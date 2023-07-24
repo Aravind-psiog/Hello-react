@@ -20,15 +20,16 @@ const HeaderTemplate = () => {
   const text = <Typography color="white">Search</Typography>;
   console.log(text);
   return (
-    <AppBar>
+    <AppBar style={{ backgroundColor: "#04011f" }}>
       <Toolbar>
         <Box
           // borderRadius={7}
           border={1}
           borderColor={"yellow"}
           padding={1}
-          width={"5%"}
+          width={"6%"}
           justifyContent={"center"}
+          borderRadius={2}
         >
           <IconButton color="inherit">
             <LocalMoviesRoundedIcon />

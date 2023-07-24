@@ -10,22 +10,15 @@ import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import StarRateIcon from "@mui/icons-material/StarRate";
 import ShareIcon from "@mui/icons-material/Share";
 import { IconButton } from "@mui/material";
-import MoviesApi from "../Api/MovieApi";
+import MoviesApi from "../Api/HomeMovieApi";
 import Rating from "@mui/material/Rating";
 import InfoIcon from "@mui/icons-material/Info";
 
 const CardContentent = (props) => {
   const data = props.movies.backdrop_path;
   const img = "http://image.tmdb.org/t/p/w500/" + `${data}`;
-  var cardStyle = {
-    display: "block",
-    width: "20vw",
-    // transitionDuration: "0.3s",
-    height: "40vw",
-  };
-  console.log(props.movies);
   return (
-    <Card sx={{ maxWidth: 300 }}>
+    <Card sx={{ maxWidth: 300, backgroundColor: "secondary.main" }}>
       <CardMedia
         sx={{ height: 200 }}
         component="img"

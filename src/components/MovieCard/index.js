@@ -10,8 +10,9 @@ import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import StarRateIcon from "@mui/icons-material/StarRate";
 import ShareIcon from "@mui/icons-material/Share";
 import { IconButton } from "@mui/material";
-import MoviesApi from "../Api/MovieApi";
-import CardContentent from "../MovieCard/cardContent";
+import MoviesApi from "../Api/HomeMovieApi";
+import CardContentent from "./HomeCardContent";
+import Pagination from "@mui/material/Pagination";
 
 const MovieCard = () => {
   const theme = useTheme();
@@ -28,9 +29,8 @@ const MovieCard = () => {
       justifyContent={"left"}
       paddingTop={10}
       padding={10}
-      // alignItems={"center"}
     >
-      {MoviesApi().map((movie) => (
+      {MoviesApi(5).map((movie) => (
         <CardContentent movies={movie}></CardContentent>
       ))}
     </Grid>
