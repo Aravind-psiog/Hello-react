@@ -8,6 +8,8 @@ import {
   Button,
   Box,
   Input,
+  Tab,
+  Tabs,
 } from "@mui/material";
 import IconButton from "@mui/material/IconButton";
 import LocalMoviesRoundedIcon from "@mui/icons-material/LocalMoviesRounded";
@@ -36,10 +38,10 @@ const HeaderTemplate = () => {
             <Typography>MMDB</Typography>
           </IconButton>
         </Box>
-        <IconButton color="inherit">
+        {/* <IconButton color="inherit">
           <MenuIcon onClick={() => setOpen(!open)} sx={{ marginLeft: 1 }} />
-        </IconButton>
-        {open && (
+        </IconButton> */}
+        {/* {open && (
           <ul className="menu">
             <li className="menu-item">
               <button>Menu 1</button>
@@ -48,9 +50,17 @@ const HeaderTemplate = () => {
               <button>Menu 2</button>
             </li>
           </ul>
-        )}
+        )} */}
 
-        <Typography sx={{ flexGrow: 1 }}>Menu</Typography>
+        <Tabs
+          textColor="red"
+          aria-label="basic tabs example"
+          sx={{ flexGrow: 1 }}
+        >
+          <Tab label="Item One" />
+          <Tab label="Item Two" />
+          <Tab label="Item Three" />
+        </Tabs>
         {/* <TextField
           id="outlined-basic"
           label={text}

@@ -4,7 +4,7 @@ import Stack from "@mui/material/Stack";
 import { Typography, Grid, Box } from "@mui/material";
 import MoviesApi from "../Api/HomeMovieApi";
 import CardContentent from "../../components/MovieCard/HomeCardContent";
-
+import "./style.css";
 export default function PaginationControlled() {
   const [page, setPage] = useState(1);
   const handleChange = (event, value) => {
@@ -28,15 +28,23 @@ export default function PaginationControlled() {
           <CardContentent movies={movie}></CardContentent>
         ))}
       </Grid>
-      <Stack spacing={2}>
-        <Typography>Page: {page}</Typography>
-        <Pagination
-          count={10}
-          color="secondary"
-          page={page}
-          onChange={handleChange}
-        />
-      </Stack>
+      <Grid
+        container
+        justifyContent={"right"}
+        paddingBottom={10}
+        paddingRight={10}
+      >
+        <Stack spacing={2}>
+          <Pagination
+            sx={{ button: { color: "#ffffff" } }}
+            count={10}
+            color="page"
+            variant="outlined"
+            page={page}
+            onChange={handleChange}
+          />
+        </Stack>
+      </Grid>
     </Grid>
   );
 }

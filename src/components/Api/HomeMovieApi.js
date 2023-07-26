@@ -3,7 +3,7 @@ import axios from "axios";
 import ApiConfigs from "./ApiConfigurations";
 import React, { useState, useEffect } from "react";
 
-export default async function DataFetch(page) {
+export default function DataFetch(page) {
   console.log("page number is: ", page);
   const [getMovies, setMovies] = useState([]);
   useEffect(() => {
@@ -14,6 +14,6 @@ export default async function DataFetch(page) {
       // return getMovies;
       // movie_list = movies.data.results
     });
-  }, []);
+  }, [page]);
   return getMovies;
 }
