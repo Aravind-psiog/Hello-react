@@ -24,7 +24,7 @@ export default function PaginationControlled() {
         paddingTop={10}
         padding={10}
       >
-        {MoviesApi(page).map((movie) => (
+        {MoviesApi({"page":page,"page_number":page}).map((movie) => (
           <CardContentent movies={movie}></CardContentent>
         ))}
       </Grid>
